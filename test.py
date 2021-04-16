@@ -13,6 +13,7 @@ from sklearn.model_selection import train_test_split
 from bnlp import NLTKTokenizer
 from bnlp.corpus import stopwords, punctuations
 from bnlp.corpus.util import remove_stopwords
+from sklearn.model_selection import StratifiedKFold
 from textblob import TextBlob
 from googletrans import Translator
 translator = Translator()
@@ -43,7 +44,6 @@ class NaiveBayes:
         return 0
     
     def addExample(self, klass, words):
-        print(words)
         for word in words:
             if klass == 1:
                 if word in self.pos_vocab:
@@ -67,41 +67,41 @@ if __name__ == "__main__":
     neg_lines = neg_file.readlines()
     neg_values = [0]*len(neg_lines)
     
-    x = np.array(pos_lines + neg_lines)
+    X = np.array(pos_lines + neg_lines)
     y = np.array(pos_values + neg_values)
     
-    X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.20, random_state=42)
-    
-    nb = NaiveBayes()
-    
+    skf = StratifiedKFold(n_splits=10)
     bnltk = NLTKTokenizer()
-    
     stopwords = stopwords()
+    fold_count = 0
     
-    for i in range(len(X_train)):
-        words = bnltk.word_tokenize(X_train[i])
-        #words = remove_stopwords(X_train[i], stopwords)
-        klass = y_train[i]
-        nb.addExample(klass,words)
+    for train_index, test_index in skf.split(X, y):
+        nb = NaiveBayes()
+        X_train, X_test = X[train_index], X[test_index]
+        y_train, y_test = y[train_index], y[test_index]
+        for i in range(len(X_train)):
+            words = bnltk.word_tokenize(X_train[i])
+            #words = remove_stopwords(X_train[i], stopwords)
+            klass = y_train[i]
+            nb.addExample(klass,words)
         
-    y_pred = []
+        y_pred = []
         
-    for i in range(len(X_test)):
-        words = bnltk.word_tokenize(X_test[i])
-        #words = remove_stopwords(X_test[i], stopwords)
-        y_pred.append(nb.classify(words))
+        for i in range(len(X_test)):
+            words = bnltk.word_tokenize(X_test[i])
+            #words = remove_stopwords(X_test[i], stopwords)
+            y_pred.append(nb.classify(words))
         
-    count = 0
-    for i in range(len(y_pred)):
-        if y_pred[i] == y_test[i]:
-            count += 1
+        count = 0
+        for i in range(len(y_pred)):
+            if y_pred[i] == y_test[i]:
+                count += 1
             
-    print("Test accuracy: ", count/len(y_test))
+        print("Fold: ", fold_count, " Test accuracy: ", count/len(y_test))
         
-    
-    
-    
-    
+        fold_count += 1
+        
+        
 
 #if __name__ == "__main__":
 #    main()
