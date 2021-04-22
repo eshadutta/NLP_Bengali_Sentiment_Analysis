@@ -1,0 +1,736 @@
+#### Multinomial Naive Bayes ####
+MNB Fold:  1  Score: 88.82
+              precision    recall  f1-score   support
+
+           0       0.95      0.63      0.76       331
+           1       0.87      0.99      0.93       850
+
+    accuracy                           0.89      1181
+   macro avg       0.91      0.81      0.84      1181
+weighted avg       0.90      0.89      0.88      1181
+
+
+
+MNB Fold:  2  Score: 88.23
+              precision    recall  f1-score   support
+
+           0       0.95      0.61      0.74       331
+           1       0.87      0.99      0.92       850
+
+    accuracy                           0.88      1181
+   macro avg       0.91      0.80      0.83      1181
+weighted avg       0.89      0.88      0.87      1181
+
+
+
+MNB Fold:  3  Score: 87.89
+              precision    recall  f1-score   support
+
+           0       0.95      0.60      0.73       331
+           1       0.86      0.99      0.92       850
+
+    accuracy                           0.88      1181
+   macro avg       0.91      0.79      0.83      1181
+weighted avg       0.89      0.88      0.87      1181
+
+
+
+MNB Fold:  4  Score: 83.07
+              precision    recall  f1-score   support
+
+           0       0.95      0.42      0.58       331
+           1       0.81      0.99      0.89       850
+
+    accuracy                           0.83      1181
+   macro avg       0.88      0.70      0.74      1181
+weighted avg       0.85      0.83      0.81      1181
+
+
+
+MNB Fold:  5  Score: 79.0
+              precision    recall  f1-score   support
+
+           0       0.95      0.27      0.42       331
+           1       0.78      0.99      0.87       850
+
+    accuracy                           0.79      1181
+   macro avg       0.86      0.63      0.64      1181
+weighted avg       0.82      0.79      0.74      1181
+
+
+
+MNB Fold:  6  Score: 82.56
+              precision    recall  f1-score   support
+
+           0       0.93      0.41      0.57       331
+           1       0.81      0.99      0.89       850
+
+    accuracy                           0.83      1181
+   macro avg       0.87      0.70      0.73      1181
+weighted avg       0.84      0.83      0.80      1181
+
+
+
+MNB Fold:  7  Score: 84.08
+              precision    recall  f1-score   support
+
+           0       0.89      0.49      0.63       331
+           1       0.83      0.98      0.90       850
+
+    accuracy                           0.84      1181
+   macro avg       0.86      0.73      0.77      1181
+weighted avg       0.85      0.84      0.82      1181
+
+
+
+MNB Fold:  8  Score: 87.88
+              precision    recall  f1-score   support
+
+           0       0.96      0.59      0.73       330
+           1       0.86      0.99      0.92       850
+
+    accuracy                           0.88      1180
+   macro avg       0.91      0.79      0.83      1180
+weighted avg       0.89      0.88      0.87      1180
+
+
+
+MNB Fold:  9  Score: 83.05
+              precision    recall  f1-score   support
+
+           0       0.87      0.47      0.61       330
+           1       0.82      0.97      0.89       850
+
+    accuracy                           0.83      1180
+   macro avg       0.84      0.72      0.75      1180
+weighted avg       0.84      0.83      0.81      1180
+
+
+
+MNB Fold:  10  Score: 82.03
+              precision    recall  f1-score   support
+
+           0       0.82      0.46      0.59       330
+           1       0.82      0.96      0.89       850
+
+    accuracy                           0.82      1180
+   macro avg       0.82      0.71      0.74      1180
+weighted avg       0.82      0.82      0.80      1180
+
+
+
+#### Random Forest Classifier ####
+RF Fold:  1  Score: 89.16
+              precision    recall  f1-score   support
+
+           0       0.84      0.76      0.80       331
+           1       0.91      0.94      0.93       850
+
+    accuracy                           0.89      1181
+   macro avg       0.87      0.85      0.86      1181
+weighted avg       0.89      0.89      0.89      1181
+
+
+
+RF Fold:  2  Score: 88.74
+              precision    recall  f1-score   support
+
+           0       0.82      0.76      0.79       331
+           1       0.91      0.94      0.92       850
+
+    accuracy                           0.89      1181
+   macro avg       0.87      0.85      0.86      1181
+weighted avg       0.89      0.89      0.89      1181
+
+
+
+RF Fold:  3  Score: 90.52
+              precision    recall  f1-score   support
+
+           0       0.88      0.77      0.82       331
+           1       0.91      0.96      0.94       850
+
+    accuracy                           0.91      1181
+   macro avg       0.90      0.86      0.88      1181
+weighted avg       0.90      0.91      0.90      1181
+
+
+
+RF Fold:  4  Score: 85.01
+              precision    recall  f1-score   support
+
+           0       0.83      0.58      0.69       331
+           1       0.85      0.95      0.90       850
+
+    accuracy                           0.85      1181
+   macro avg       0.84      0.77      0.79      1181
+weighted avg       0.85      0.85      0.84      1181
+
+
+
+RF Fold:  5  Score: 79.93
+              precision    recall  f1-score   support
+
+           0       0.78      0.40      0.53       331
+           1       0.80      0.96      0.87       850
+
+    accuracy                           0.80      1181
+   macro avg       0.79      0.68      0.70      1181
+weighted avg       0.80      0.80      0.78      1181
+
+
+
+RF Fold:  6  Score: 81.54
+              precision    recall  f1-score   support
+
+           0       0.80      0.46      0.58       331
+           1       0.82      0.96      0.88       850
+
+    accuracy                           0.82      1181
+   macro avg       0.81      0.71      0.73      1181
+weighted avg       0.81      0.82      0.80      1181
+
+
+
+RF Fold:  7  Score: 86.54
+              precision    recall  f1-score   support
+
+           0       0.81      0.67      0.74       331
+           1       0.88      0.94      0.91       850
+
+    accuracy                           0.87      1181
+   macro avg       0.85      0.81      0.82      1181
+weighted avg       0.86      0.87      0.86      1181
+
+
+
+RF Fold:  8  Score: 89.66
+              precision    recall  f1-score   support
+
+           0       0.86      0.75      0.80       330
+           1       0.91      0.95      0.93       850
+
+    accuracy                           0.90      1180
+   macro avg       0.88      0.85      0.87      1180
+weighted avg       0.89      0.90      0.89      1180
+
+
+
+RF Fold:  9  Score: 86.27
+              precision    recall  f1-score   support
+
+           0       0.80      0.67      0.73       330
+           1       0.88      0.94      0.91       850
+
+    accuracy                           0.86      1180
+   macro avg       0.84      0.80      0.82      1180
+weighted avg       0.86      0.86      0.86      1180
+
+
+
+RF Fold:  10  Score: 83.31
+              precision    recall  f1-score   support
+
+           0       0.71      0.68      0.69       330
+           1       0.88      0.89      0.89       850
+
+    accuracy                           0.83      1180
+   macro avg       0.79      0.78      0.79      1180
+weighted avg       0.83      0.83      0.83      1180
+
+
+
+#### Decision Tree Classifier ####
+DT Fold:  1  Score: 84.67
+              precision    recall  f1-score   support
+
+           0       0.73      0.72      0.72       331
+           1       0.89      0.90      0.89       850
+
+    accuracy                           0.85      1181
+   macro avg       0.81      0.81      0.81      1181
+weighted avg       0.85      0.85      0.85      1181
+
+
+
+DT Fold:  2  Score: 84.84
+              precision    recall  f1-score   support
+
+           0       0.73      0.73      0.73       331
+           1       0.89      0.90      0.89       850
+
+    accuracy                           0.85      1181
+   macro avg       0.81      0.81      0.81      1181
+weighted avg       0.85      0.85      0.85      1181
+
+
+
+DT Fold:  3  Score: 86.96
+              precision    recall  f1-score   support
+
+           0       0.75      0.80      0.77       331
+           1       0.92      0.90      0.91       850
+
+    accuracy                           0.87      1181
+   macro avg       0.84      0.85      0.84      1181
+weighted avg       0.87      0.87      0.87      1181
+
+
+
+DT Fold:  4  Score: 81.29
+              precision    recall  f1-score   support
+
+           0       0.69      0.61      0.65       331
+           1       0.85      0.89      0.87       850
+
+    accuracy                           0.81      1181
+   macro avg       0.77      0.75      0.76      1181
+weighted avg       0.81      0.81      0.81      1181
+
+
+
+DT Fold:  5  Score: 78.07
+              precision    recall  f1-score   support
+
+           0       0.65      0.48      0.55       331
+           1       0.82      0.90      0.85       850
+
+    accuracy                           0.78      1181
+   macro avg       0.73      0.69      0.70      1181
+weighted avg       0.77      0.78      0.77      1181
+
+
+
+DT Fold:  6  Score: 79.42
+              precision    recall  f1-score   support
+
+           0       0.67      0.53      0.59       331
+           1       0.83      0.90      0.86       850
+
+    accuracy                           0.79      1181
+   macro avg       0.75      0.71      0.73      1181
+weighted avg       0.78      0.79      0.79      1181
+
+
+
+DT Fold:  7  Score: 83.49
+              precision    recall  f1-score   support
+
+           0       0.71      0.70      0.70       331
+           1       0.88      0.89      0.89       850
+
+    accuracy                           0.83      1181
+   macro avg       0.80      0.79      0.79      1181
+weighted avg       0.83      0.83      0.83      1181
+
+
+
+DT Fold:  8  Score: 85.25
+              precision    recall  f1-score   support
+
+           0       0.73      0.74      0.74       330
+           1       0.90      0.90      0.90       850
+
+    accuracy                           0.85      1180
+   macro avg       0.82      0.82      0.82      1180
+weighted avg       0.85      0.85      0.85      1180
+
+
+
+DT Fold:  9  Score: 82.63
+              precision    recall  f1-score   support
+
+           0       0.70      0.66      0.68       330
+           1       0.87      0.89      0.88       850
+
+    accuracy                           0.83      1180
+   macro avg       0.79      0.77      0.78      1180
+weighted avg       0.82      0.83      0.82      1180
+
+
+
+DT Fold:  10  Score: 77.29
+              precision    recall  f1-score   support
+
+           0       0.58      0.68      0.63       330
+           1       0.87      0.81      0.84       850
+
+    accuracy                           0.77      1180
+   macro avg       0.72      0.75      0.73      1180
+weighted avg       0.79      0.77      0.78      1180
+
+
+
+#### SVM ####
+SVM Fold:  1  Score: 71.97
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       331
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1181
+   macro avg       0.36      0.50      0.42      1181
+weighted avg       0.52      0.72      0.60      1181
+
+
+
+SVM Fold:  2  Score: 71.97
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       331
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1181
+   macro avg       0.36      0.50      0.42      1181
+weighted avg       0.52      0.72      0.60      1181
+
+
+
+SVM Fold:  3  Score: 71.97
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       331
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1181
+   macro avg       0.36      0.50      0.42      1181
+weighted avg       0.52      0.72      0.60      1181
+
+
+
+SVM Fold:  4  Score: 71.97
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       331
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1181
+   macro avg       0.36      0.50      0.42      1181
+weighted avg       0.52      0.72      0.60      1181
+
+
+
+SVM Fold:  5  Score: 71.97
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       331
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1181
+   macro avg       0.36      0.50      0.42      1181
+weighted avg       0.52      0.72      0.60      1181
+
+
+
+SVM Fold:  6  Score: 71.97
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       331
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1181
+   macro avg       0.36      0.50      0.42      1181
+weighted avg       0.52      0.72      0.60      1181
+
+
+
+SVM Fold:  7  Score: 71.97
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       331
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1181
+   macro avg       0.36      0.50      0.42      1181
+weighted avg       0.52      0.72      0.60      1181
+
+
+
+SVM Fold:  8  Score: 72.03
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       330
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1180
+   macro avg       0.36      0.50      0.42      1180
+weighted avg       0.52      0.72      0.60      1180
+
+
+
+SVM Fold:  9  Score: 72.03
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       330
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1180
+   macro avg       0.36      0.50      0.42      1180
+weighted avg       0.52      0.72      0.60      1180
+
+
+
+SVM Fold:  10  Score: 72.03
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       330
+           1       0.72      1.00      0.84       850
+
+    accuracy                           0.72      1180
+   macro avg       0.36      0.50      0.42      1180
+weighted avg       0.52      0.72      0.60      1180
+
+
+
+#### KNN ####
+KNN Fold:  1  Score: 84.08
+              precision    recall  f1-score   support
+
+           0       0.86      0.52      0.65       331
+           1       0.84      0.97      0.90       850
+
+    accuracy                           0.84      1181
+   macro avg       0.85      0.74      0.77      1181
+weighted avg       0.84      0.84      0.83      1181
+
+
+
+KNN Fold:  2  Score: 82.3
+              precision    recall  f1-score   support
+
+           0       0.79      0.51      0.62       331
+           1       0.83      0.95      0.88       850
+
+    accuracy                           0.82      1181
+   macro avg       0.81      0.73      0.75      1181
+weighted avg       0.82      0.82      0.81      1181
+
+
+
+KNN Fold:  3  Score: 85.1
+              precision    recall  f1-score   support
+
+           0       0.85      0.57      0.68       331
+           1       0.85      0.96      0.90       850
+
+    accuracy                           0.85      1181
+   macro avg       0.85      0.76      0.79      1181
+weighted avg       0.85      0.85      0.84      1181
+
+
+
+KNN Fold:  4  Score: 78.83
+              precision    recall  f1-score   support
+
+           0       0.80      0.33      0.46       331
+           1       0.79      0.97      0.87       850
+
+    accuracy                           0.79      1181
+   macro avg       0.79      0.65      0.67      1181
+weighted avg       0.79      0.79      0.75      1181
+
+
+
+KNN Fold:  5  Score: 76.63
+              precision    recall  f1-score   support
+
+           0       0.72      0.27      0.39       331
+           1       0.77      0.96      0.86       850
+
+    accuracy                           0.77      1181
+   macro avg       0.75      0.62      0.62      1181
+weighted avg       0.76      0.77      0.73      1181
+
+
+
+KNN Fold:  6  Score: 75.78
+              precision    recall  f1-score   support
+
+           0       0.71      0.23      0.35       331
+           1       0.76      0.96      0.85       850
+
+    accuracy                           0.76      1181
+   macro avg       0.74      0.60      0.60      1181
+weighted avg       0.75      0.76      0.71      1181
+
+
+
+KNN Fold:  7  Score: 80.44
+              precision    recall  f1-score   support
+
+           0       0.75      0.46      0.57       331
+           1       0.82      0.94      0.87       850
+
+    accuracy                           0.80      1181
+   macro avg       0.78      0.70      0.72      1181
+weighted avg       0.80      0.80      0.79      1181
+
+
+
+KNN Fold:  8  Score: 83.9
+              precision    recall  f1-score   support
+
+           0       0.85      0.52      0.64       330
+           1       0.84      0.96      0.90       850
+
+    accuracy                           0.84      1180
+   macro avg       0.84      0.74      0.77      1180
+weighted avg       0.84      0.84      0.83      1180
+
+
+
+KNN Fold:  9  Score: 78.47
+              precision    recall  f1-score   support
+
+           0       0.71      0.38      0.50       330
+           1       0.80      0.94      0.86       850
+
+    accuracy                           0.78      1180
+   macro avg       0.76      0.66      0.68      1180
+weighted avg       0.77      0.78      0.76      1180
+
+
+
+KNN Fold:  10  Score: 78.31
+              precision    recall  f1-score   support
+
+           0       0.69      0.40      0.51       330
+           1       0.80      0.93      0.86       850
+
+    accuracy                           0.78      1180
+   macro avg       0.75      0.67      0.69      1180
+weighted avg       0.77      0.78      0.76      1180
+
+
+
+#### XGB ####
+[00:04:11] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  1  Score: 89.59
+              precision    recall  f1-score   support
+
+           0       0.86      0.76      0.80       331
+           1       0.91      0.95      0.93       850
+
+    accuracy                           0.90      1181
+   macro avg       0.88      0.85      0.87      1181
+weighted avg       0.89      0.90      0.89      1181
+
+
+
+[00:04:13] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  2  Score: 88.91
+              precision    recall  f1-score   support
+
+           0       0.84      0.75      0.79       331
+           1       0.91      0.94      0.92       850
+
+    accuracy                           0.89      1181
+   macro avg       0.87      0.85      0.86      1181
+weighted avg       0.89      0.89      0.89      1181
+
+
+
+[00:04:16] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  3  Score: 90.52
+              precision    recall  f1-score   support
+
+           0       0.86      0.79      0.82       331
+           1       0.92      0.95      0.94       850
+
+    accuracy                           0.91      1181
+   macro avg       0.89      0.87      0.88      1181
+weighted avg       0.90      0.91      0.90      1181
+
+
+
+[00:04:19] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  4  Score: 84.34
+              precision    recall  f1-score   support
+
+           0       0.85      0.53      0.66       331
+           1       0.84      0.96      0.90       850
+
+    accuracy                           0.84      1181
+   macro avg       0.85      0.75      0.78      1181
+weighted avg       0.84      0.84      0.83      1181
+
+
+
+[00:04:21] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  5  Score: 80.27
+              precision    recall  f1-score   support
+
+           0       0.75      0.44      0.56       331
+           1       0.81      0.94      0.87       850
+
+    accuracy                           0.80      1181
+   macro avg       0.78      0.69      0.71      1181
+weighted avg       0.80      0.80      0.78      1181
+
+
+
+[00:04:24] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  6  Score: 83.23
+              precision    recall  f1-score   support
+
+           0       0.81      0.53      0.64       331
+           1       0.84      0.95      0.89       850
+
+    accuracy                           0.83      1181
+   macro avg       0.82      0.74      0.76      1181
+weighted avg       0.83      0.83      0.82      1181
+
+
+
+[00:04:26] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  7  Score: 86.54
+              precision    recall  f1-score   support
+
+           0       0.81      0.68      0.74       331
+           1       0.88      0.94      0.91       850
+
+    accuracy                           0.87      1181
+   macro avg       0.85      0.81      0.82      1181
+weighted avg       0.86      0.87      0.86      1181
+
+
+
+[00:04:29] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  8  Score: 88.9
+              precision    recall  f1-score   support
+
+           0       0.85      0.74      0.79       330
+           1       0.90      0.95      0.92       850
+
+    accuracy                           0.89      1180
+   macro avg       0.87      0.84      0.86      1180
+weighted avg       0.89      0.89      0.89      1180
+
+
+
+[00:04:31] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  9  Score: 86.61
+              precision    recall  f1-score   support
+
+           0       0.81      0.68      0.74       330
+           1       0.88      0.94      0.91       850
+
+    accuracy                           0.87      1180
+   macro avg       0.85      0.81      0.82      1180
+weighted avg       0.86      0.87      0.86      1180
+
+
+
+[00:04:32] WARNING: ..\src\learner.cc:1061: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
+xgb Fold:  10  Score: 81.78
+              precision    recall  f1-score   support
+
+           0       0.68      0.65      0.67       330
+           1       0.87      0.88      0.87       850
+
+    accuracy                           0.82      1180
+   macro avg       0.77      0.77      0.77      1180
+weighted avg       0.82      0.82      0.82      1180
+
+
+
