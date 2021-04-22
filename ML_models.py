@@ -1,24 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 16 19:50:10 2021
-
-@author: eshadutta
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Apr 15 23:41:55 2021
-
-@author: eshadutta
-"""
-
 import nltk
 import numpy as np
 import re
 import math
 from sklearn.model_selection import train_test_split
+from sklearn import metrics
+from matplotlib import pyplot as plt
 from bnlp import NLTKTokenizer
 from bnlp.corpus import stopwords, punctuations
 from bnlp.corpus.util import remove_stopwords
@@ -32,6 +18,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
+import xgboost as xgb
 
 
 def clean_text(X):
@@ -76,11 +63,11 @@ def clean_text(X):
     return converted_X
 
 if __name__ == "__main__":
-    pos_file = open('all_positive_8500.txt')
+    pos_file = open('data/all_positive_8500.txt',encoding='utf8')
     pos_lines = pos_file.readlines()
     pos_values = [1]*len(pos_lines)
     
-    neg_file = open('all_negative_3307.txt')
+    neg_file = open('data/all_negative_3307.txt',encoding='utf8')
     neg_lines = neg_file.readlines()
     neg_values = [0]*len(neg_lines)
     
@@ -88,14 +75,14 @@ if __name__ == "__main__":
     y = np.array(pos_values + neg_values)
     
     
-            
-    
     skf = StratifiedKFold(n_splits=10, random_state = 42)
     fold_count = 0
     
     vocab = TfidfVectorizer().fit(X)
     X = vocab.transform(X)
     
+    print("#### Multinomial Naive Bayes ####")
+         
     for train_index, test_index in skf.split(X, y):
         fold_count += 1
         X_train, X_test = X[train_index], X[test_index]
@@ -108,10 +95,17 @@ if __name__ == "__main__":
         #print("Confusion Matrix for Multinomial Naive Bayes:")
         #print(confusion_matrix(y_test,predmnb))
         print("MNB Fold: ", fold_count, " Score:",round(accuracy_score(y_test,predmnb)*100,2))
+        report = classification_report(y_test,predmnb,output_dict=True)
+        print(classification_report(y_test,predmnb))
+        print("\n")
         
-        #print("Classification Report:",classification_report(y_test,predmnb))
-        
-        
+    
+    print("#### Random Forest Classifier ####")
+    fold_count = 0
+    for train_index, test_index in skf.split(X, y):
+        fold_count += 1
+        X_train, X_test = X[train_index], X[test_index]
+        y_train, y_test = y[train_index], y[test_index]
         
         rmfr = RandomForestClassifier(n_estimators=50)
         rmfr.fit(X_train,y_train)
@@ -119,23 +113,70 @@ if __name__ == "__main__":
         #print("Confusion Matrix for Random Forest Classifier:")
         #print(confusion_matrix(y_test,predrmfr))
         print("RF Fold: ", fold_count, " Score:",round(accuracy_score(y_test,predrmfr)*100,2))
-        #print("Classification Report:",classification_report(y_test,predrmfr))
+        print(classification_report(y_test,predrmfr))
+        #fpr, tpr, _ = metrics.roc_curve(y_test,  predrmfr)
+        #auc = metrics.roc_auc_score(y_test, predrmfr)
+        #plt.plot(fpr,tpr,label="Fold : " + str(fold_count))
+        print("\n")
+    #plt.xlabel("False Positive Rate")
+    #plt.ylabel("True Positive Rate")
+    #plt.title("ROC for Random Forest Classifier")
+    #plt.legend()
+    #plt.savefig("ROC.jpg")
+        
+    
+    print("#### Decision Tree Classifier ####")   
+    fold_count = 0
+    for train_index, test_index in skf.split(X, y):
+        fold_count += 1
+        X_train, X_test = X[train_index], X[test_index]
+        y_train, y_test = y[train_index], y[test_index]
         
         dt = DecisionTreeClassifier()
         dt.fit(X_train,y_train)
         preddt = dt.predict(X_test)
         
         print("DT Fold: ", fold_count, " Score:",round(accuracy_score(y_test,preddt)*100,2))
+        print(classification_report(y_test,preddt))
+        print("\n")
+        
+    print("#### SVM ####")   
+    fold_count = 0
+    for train_index, test_index in skf.split(X, y):
+        fold_count += 1
+        X_train, X_test = X[train_index], X[test_index]
+        y_train, y_test = y[train_index], y[test_index]
         
         svm = SVC(random_state=101,gamma='auto')
         svm.fit(X_train,y_train)
         predsvm = svm.predict(X_test)
         print("SVM Fold: ", fold_count, " Score:",round(accuracy_score(y_test,predsvm)*100,2))
+        print(classification_report(y_test,predsvm))
+        print("\n")
         
-        
+    print("#### KNN ####")   
+    fold_count = 0
+    for train_index, test_index in skf.split(X, y):
+        fold_count += 1
+        X_train, X_test = X[train_index], X[test_index]
+        y_train, y_test = y[train_index], y[test_index] 
         knn = KNeighborsClassifier(n_neighbors=3)
         knn.fit(X_train,y_train)
         predknn = knn.predict(X_test)
         print("KNN Fold: ", fold_count, " Score:",round(accuracy_score(y_test,predknn)*100,2))
-                
+        print(classification_report(y_test,predknn))
+        print("\n")
+    
+    print("#### XGB ####")   
+    fold_count = 0
+    for train_index, test_index in skf.split(X, y):
+        fold_count += 1
+        X_train, X_test = X[train_index], X[test_index]
+        y_train, y_test = y[train_index], y[test_index] 
+        xg = xgb.XGBClassifier()
+        xg.fit(X_train,y_train)
+        predxg = xg.predict(X_test)
+        print("xgb Fold: ", fold_count, " Score:",round(accuracy_score(y_test,predxg)*100,2))
+        print(classification_report(y_test,predxg))
+        print("\n")
                 
